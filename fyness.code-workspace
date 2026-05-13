@@ -1,0 +1,17 @@
+{
+	"folders": [
+		{
+			"path": "."
+		},
+		{
+		        "path": "../explayner/"
+		},
+		{
+		        "path": "../vibesafe/"
+		},
+		{
+		        "path": "../../mlatcl/advds/"
+		}
+	],
+	"settings": {}
+}

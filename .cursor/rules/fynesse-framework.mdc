@@ -1,0 +1,25 @@
+---
+description: Architecture rules for fynesse data science projects (Access-Assess-Address)
+globs:
+  - "templates/fynesse/**/*.py"
+  - "templates/fynesse/**/*.yml"
+  - "rules/fynesse-framework.md"
+alwaysApply: false
+---
+
+# Editing Fynesse Framework Files
+
+When editing files in this repository under `templates/fynesse/` or `rules/fynesse-framework.md`, note:
+
+- `templates/fynesse/` is the **source of truth** for the stubs installed into target projects by `install.sh`. Changes here affect every new project that installs Fynesse.
+- `rules/fynesse-framework.md` is the **canonical AI rules document**. It is deployed verbatim to `.cursor/rules/fynesse-framework.mdc`, `CLAUDE.md`, `AGENTS.md`, and Copilot instructions by `install.sh`.
+- When updating the rules, edit `rules/fynesse-framework.md` — do not edit deployed copies in target projects directly.
+
+## The Fynesse Framework (for reference when editing)
+
+See `rules/fynesse-framework.md` for the full framework specification. Key points:
+
+- **access.py**: obtain data, document legal/ethical basis, no cleaning or analysis
+- **assess.py**: question-agnostic quality checks, imports from access, no question-specific logic
+- **address.py**: question-specific analysis, receives assessed data as input
+- **config.py**: layered YAML config (defaults.yml → machine.yml → _config.yml)

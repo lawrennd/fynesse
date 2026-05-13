@@ -1,0 +1,27 @@
+#!/bin/bash
+# Wrapper script for running the What's Next script with the virtual environment
+#
+# This script ensures the What's Next script runs in the correct virtual environment
+# and handles proper activation/deactivation of the environment.
+#
+# Usage:
+#   ./whats-next [options]
+#
+# Options:
+#   --no-git              Skip Git status information
+#   --no-color           Disable colored output
+#   --cip-only           Show only CIP status
+#   --backlog-only       Show only backlog status
+#   --requirements-only  Show only requirements status
+
+# Determine directory where this script is located
+SCRIPT_DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" &> /dev/null && pwd )"
+
+# Activate the virtual environment
+source "${SCRIPT_DIR}/.venv-vibesafe/bin/activate"
+
+# Run the actual script
+"${SCRIPT_DIR}/scripts/whats_next.py" "$@"
+
+# Deactivate the virtual environment
+deactivate
