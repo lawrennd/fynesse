@@ -4,6 +4,9 @@
 			"path": "."
 		},
 		{
+		        "path": "../../mlatcl/pub-dialogue/"
+		},
+		{
 		        "path": "../explayner/"
 		},
 		{
