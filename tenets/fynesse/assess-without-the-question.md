@@ -3,7 +3,7 @@ id: "assess-without-the-question"
 title: "Assess Without the Question"
 status: "Active"
 created: "2026-05-13"
-last_reviewed: "2026-05-13"
+last_reviewed: "2026-05-14"
 review_frequency: "Annual"
 conflicts_with: []
 tags:
@@ -18,7 +18,7 @@ tags:
 
 **Description**: All work performed in the Assess phase must be independent of the specific analysis question being asked. Assessment is about understanding the data as it is — its structure, quality, encodings, missing values, outliers, and provenance — not about preparing it for a particular model or analysis. This ensures that the assess layer is reusable across multiple analyses and by multiple analysts. Decisions made in assess that are shaped by the downstream question contaminate the data understanding and make it impossible to share or reuse.
 
-**Quote**: *"Understand the data before you ask it a question."*
+**Quote**: *"Assess is only work you can do without the question in mind."*
 
 **Examples**:
 - Documenting how missing values are encoded in a dataset (e.g. `-999` as a sentinel) without deciding what to do about them
@@ -38,4 +38,4 @@ tags:
 - In some domains, cleaning decisions are always question-specific and no universal assess layer exists
 - Resolution: Document this explicitly; the assess layer can still record the raw data properties even if downstream cleaning must be question-specific
 
-**Version**: 1.0 (2026-05-13)
+**Version**: 1.1 (2026-05-14)
